@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { AlbumComponent } from './album/album.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,13 @@ import { CardComponent } from './card/card.component';
     HeaderComponent,
     AlbumComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

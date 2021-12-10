@@ -20,4 +20,5 @@
   }
   .card-body .likes .fa-heart {
     color: #c34;
+    cursor: pointer;
   }
