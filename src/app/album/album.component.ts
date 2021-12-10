@@ -24,6 +24,12 @@ export class AlbumComponent implements OnInit {
       title: 'La Réunion',
       description: "C'est beau la réunion !",
       likes:0
+    },
+    {
+      picture: 'https://www.cartedelareunion.fr/wp-content/uploads/2017/08/Ile-de-La-Reunion-vue-aerienne-cartedelareunion.fr-%C2%A9-Serge-Gelabert.jpg',
+      title: 'La Réunion',
+      description: "C'est beau la réunion !",
+      likes:0
     }
   ]
 
