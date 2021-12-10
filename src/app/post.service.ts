@@ -7,13 +7,28 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class PostService {
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
+​
+  // URL absolue
+  serverUrl = 'https://my-json-server.typicode.com';
+  // chemin relatif sur le serveur
+  postsPath = '/bhubr/album-api/posts';
 
-  getAllPosts(): Post[] {
-    return POSTS;
+  getAllPosts(): Promise<Post[]> {
+    return this.http
+    .get<Post[]>(
+      `${this.serverUrl}${this.postsPath}`
+    )
+    .toPromise();
   }
 
-  getPost(id: number): Post | undefined {
-    return POSTS.find(item => id === item.id);
+  getPost(id: number): Promise<Post> /* | undefined */ {
+    return this.http
+    .get<Post>(
+      `${this.serverUrl}${this.postsPath}/${id}`
+    )
+    .toPromise();
   }
 }
