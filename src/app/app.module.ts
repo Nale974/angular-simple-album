@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { DetailsComponent } from './details/details.component';
+import { CreateCardComponent } from './create-card/create-card.component';
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { DetailsComponent } from './details/details.component';
     CardComponent,
     ContactComponent,
     AboutComponent,
-    DetailsComponent
+    DetailsComponent,
+    CreateCardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
